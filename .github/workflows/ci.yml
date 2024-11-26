@@ -36,3 +36,7 @@ jobs:
     - name: Run Scraper
       run: python main.py
 
+    - name: Ensure ChromeDriver in PATH
+      run: export PATH=$PATH:/usr/lib/chromium-browser/
+    
+
