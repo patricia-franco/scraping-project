@@ -23,5 +23,16 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Install Google Chrome
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable
+
+    - name: Install ChromeDriver
+      run: |
+        sudo apt-get install -y chromium-chromedriver
+        export PATH=$PATH:/usr/lib/chromium-browser/
+
     - name: Run Scraper
       run: python main.py
+
